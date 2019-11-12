@@ -1,6 +1,8 @@
 FROM docker:18.09.3
 
-RUN apk --update add curl groff \
+WORKDIR /
+
+RUN apk --update add curl groff python \
     ; set -ex \
     ; curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "/tmp/awscli-bundle.zip" \
     ; unzip /tmp/awscli-bundle.zip -d /tmp/ \
