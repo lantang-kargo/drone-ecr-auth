@@ -1,5 +1,4 @@
-FROM docker:18.09.3
-
+FROM docker:19.03.4
 WORKDIR /
 
 RUN apk --update add curl groff python \
@@ -15,4 +14,3 @@ RUN apk --update add curl groff python \
 ADD docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
-
