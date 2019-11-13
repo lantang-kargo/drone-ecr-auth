@@ -11,6 +11,3 @@ RUN apk --update add curl groff python \
     ; touch /.aws/credentials \ 
     ; touch /.aws/config \
     ; rm -rf /tmp/*
-ADD docker-entrypoint.sh /
-RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT ["/docker-entrypoint.sh"]
